@@ -140,7 +140,7 @@ def parse_random_seed(config: Any) -> Callable[[str], bool]:
 
 def parse_heulingo_configuration(config: Any) -> Callable[[str], bool]:
     def parse(sval: str) -> bool:
-        if sval not in ("teaspoon", "tsp", "sgp", "spg", "wsc", "wsc,large", "wsc,medium", "sd"):
+        if sval not in ("teaspoon", "tsp", "sgp", "spg", "wsc", "wsc,large", "wsc,medium", "sd", "mapf"):
             return False
         if sval == "wsc":
             config.heulingo_configuration = sval + ",medium"
@@ -367,6 +367,8 @@ if __name__ == "__main__":
                 heulingo_configuration = "wsc,large"
             elif re.fullmatch(r".*=sd", argv[i]) or re.fullmatch(r"sd", argv[min(i+1, argv_length-1)]):
                 heulingo_configuration = "sd"
+            elif re.fullmatch(r".*=mapf", argv[i]) or re.fullmatch(r"mapf", argv[min(i+1, argv_length-1)]):
+                heulingo_configuration = "mapf"
 
             if heulingo_configuration is not None:
                 configuration = HeulingoConfig.heulingo_configuration_values[heulingo_configuration]['configuration']

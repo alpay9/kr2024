@@ -142,7 +142,19 @@ class HeulingoConfig:
                                             'iter-opt-heuristic': None,
                                             'iter-restart-on-model': None,
                                             'iter-opt-mode': "opt,0,dynamic",
-                                            'iter-solve-limit': "40000"}
+                                            'iter-solve-limit': "40000"},
+                                     'mapf': {
+                                            'configuration': 'handy',          # Better for optimization problems
+                                            'opt-strategy': 'bb,hier',         # Use hierarchical optimization
+                                            'parallel-mode': '1',
+                                            'solve-limit': '500000',           # Moderate solve limit
+                                            'iter-configuration': 'handy',
+                                            'iter-opt-strategy': 'bb,hier',    # Consistent optimization strategy
+                                            'iter-opt-heuristic': '3',         # Use optimization heuristics
+                                            'iter-restart-on-model': '1',
+                                            'iter-opt-mode': 'opt',            # Focus on finding optimal solutions
+                                            'iter-solve-limit': '50000'
+                                            }
                                      }
 
     def __init__(self):
