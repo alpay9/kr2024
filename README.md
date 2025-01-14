@@ -7,7 +7,7 @@ This project is still under development and it uses the heulingo solver. (https:
 
 ### Multi-Agent Pathfinding using Large Neighborhood Search
 
-'''
+```
 python3 solver/heulingo.py \
     --heulingo-configuration=mapf \
     --opt-strategy=bb,hier \
@@ -22,11 +22,11 @@ python3 solver/heulingo.py \
     benchmark/mapf/configs/config_lns.lp \
     benchmark/mapf/instances/random_s10_a5_c75_h14.lp \
     -c maxT=50
-'''
+```
 
 ### Multi-Agent Patfinding using Large Neighborhood Prioritized Search
 
-'''
+```
 python3 solver/heulingo.py \
     --heulingo-configuration=mapf \
     --opt-strategy=bb,hier \
@@ -47,4 +47,4 @@ python3 solver/heulingo.py \
     benchmark/mapf/configs/config_lnps.lp \
     benchmark/mapf/instances/random_s10_a5_c75_h14.lp \
     -c maxT=50
-'''
+```
